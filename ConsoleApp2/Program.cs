@@ -15,6 +15,7 @@ namespace ConsoleApp2
             //En este caso sera si puedes conducir un automovil o no
             //Este es solo un pequeño caso que se puede implementar el AND
 
+
             byte a;
             string b, c;
 
@@ -27,14 +28,19 @@ namespace ConsoleApp2
             b = Console.ReadLine();
             Console.WriteLine("Coloca la edad que tienes");
             a = Convert.ToByte(Console.ReadLine());
+            b=b.ToUpper();
 
-            if (a >= 18 && b == c)
+            if (a >= 16 && a < 18 && b == c)
             {
-                Console.WriteLine("Si puedes conducir");
+                Console.WriteLine("Si puedes conducir pero con cuidado ¡ERES MENOR DE EDAD!");
             }
-            else 
+            else if (a >= 18 && b ==c)
             {
-                Console.WriteLine("No puedes conducir");
+                Console.WriteLine("Si puedes conducir y eres mayor de edad");
+            }
+            else
+            {
+                Console.WriteLine("NO PUEDES CONDUCIR");
             }
         }
     }
